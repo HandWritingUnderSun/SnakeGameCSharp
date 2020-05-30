@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:SnakeGame"
         xmlns:Properties="clr-namespace:SnakeGame.Properties" x:Class="SnakeGame.MainWindow"
         mc:Ignorable="d"
-        Title="Snake Game" Height="700" Width="1100" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="pack://siteoforigin:,,,/Resources/SnakeGame.ico">
+        Title="Snake Game" Height="700" Width="1100" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" >
     <Grid FocusManager.FocusedElement="{Binding ElementName=btn}">
         <DockPanel>
             <Menu DockPanel.Dock="Top" Background="#3498db" Height="20" Width="Auto" >
@@ -20,7 +21,8 @@
                 </MenuItem>
             </Menu>
             <StatusBar DockPanel.Dock="Bottom" Height="20" Width="Auto" Background="Black"/>
-            <Canvas DockPanel.Dock="Left" Width="850" Height="600" Background="#1abc9c" Margin="5"/>
+            <Canvas DockPanel.Dock="Left" x:Name="MainPanel" Width="850" Height="600" 
+                    Background="#C7EDCC" Margin="5" Focusable="True" PreviewKeyDown="MainPanel_PreviewKeyDown"/>
             <StackPanel DockPanel.Dock="Right" Width="Auto" Height="Auto" Background="#ecf0f1"/>
         </DockPanel>
     </Grid>

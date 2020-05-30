@@ -8,7 +8,7 @@ namespace SnakeGame
         int len;
         Cell[] foodCell = new Cell[20];
 
-        Food()
+        public Food()
         {
             len = 1;
             for (int i = 0; i < len; i++)

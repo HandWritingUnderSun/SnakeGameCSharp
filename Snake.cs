@@ -5,7 +5,7 @@
         int Len;
         Cell[] cells;
 
-        Snake()
+        public Snake()
         {
             Len = 3;
             cells = new Cell[600];
