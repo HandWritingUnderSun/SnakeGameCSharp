@@ -1,12 +1,17 @@
-﻿namespace SnakeGame
+﻿using System.Drawing;
+
+namespace SnakeGame
 {
     public class Cell
     {
         int indexX;
         int indexY;
         int indexOrder;
+        Color color;
+        int width;
+        int heigth;
 
-        Cell()
+        public Cell()
         {
             IndexX = 0;
             IndexY = 0;

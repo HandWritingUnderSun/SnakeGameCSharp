@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SnakeGame
 {
@@ -19,21 +15,21 @@ namespace SnakeGame
             {
                 foodCell[i] = new Cell();
 
-                foodCell[i].setIndexX(setRandomIndexX());
-                foodCell[i].setIndexY(setRandomIndexY());
+                foodCell[i].IndexX = setRandomIndexX();
+                foodCell[i].IndexY = setRandomIndexY();
             }
         }
 
         public static int setRandomIndexX()
         {
             Random r = new Random();
-            return (r.nextInt(33) + 1) * 25;
+            return (r.Next(33) + 1) * 25;
         }
 
         public static int setRandomIndexY()
         {
             Random r = new Random();
-            return (r.nextInt(24) + 1) * 25;
+            return (r.Next(24) + 1) * 25;
         }
     }
 }

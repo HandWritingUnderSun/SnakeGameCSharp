@@ -23,7 +23,25 @@ namespace SnakeGame
         public MainWindow()
         {
             InitializeComponent();
+
+            Init();
+            Focus(this);
+            this.setFocusable(true);
+
+            this.addKeyListener(this);
+            timer.start();
         }
+
+        private void Init()
+        {
+            timer = new Timer(300, this);
+            snake = new Snake();
+            snakeDirection = SnakeDirection.Right;
+
+            food = new Food();
+
+        }
+
 
         public void Cancel()
         {

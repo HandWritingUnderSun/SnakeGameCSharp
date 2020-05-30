@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:SnakeGame"
         xmlns:Properties="clr-namespace:SnakeGame.Properties" x:Class="SnakeGame.MainWindow"
         mc:Ignorable="d"
-        Title="Snake Game" Height="700" Width="1100" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid>
+        Title="Snake Game" Height="700" Width="1100" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="pack://siteoforigin:,,,/Resources/SnakeGame.ico">
+    <Grid FocusManager.FocusedElement="{Binding ElementName=btn}">
         <DockPanel>
             <Menu DockPanel.Dock="Top" Background="#3498db" Height="20" Width="Auto" >
                 <MenuItem Header="Game">
