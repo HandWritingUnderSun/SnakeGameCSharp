@@ -4,4 +4,6 @@
 3、https://www.cnblogs.com/lonelyxmas/p/12079057.html
 
 代码说明：
-1、Snake类：集成自IMove接口，可移动；包含长度信息；
+1、此游戏通过Canvas画布布局
+2、各种Snake类：集成自IMove接口，可移动；包含长度信息；
+3、
