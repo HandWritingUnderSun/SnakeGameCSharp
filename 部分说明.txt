@@ -1,0 +1,7 @@
+﻿重要参考：
+1、https://www.cnblogs.com/lonelyxmas/p/11019997.html
+2、https://www.cnblogs.com/lonelyxmas/p/11019988.html
+3、https://www.cnblogs.com/lonelyxmas/p/12079057.html
+
+代码说明：
+1、Snake类：集成自IMove接口，可移动；包含长度信息；

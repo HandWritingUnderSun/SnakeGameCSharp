@@ -24,7 +24,7 @@ namespace SnakeGame
     {
         bool isStart = false;
         bool isFail = false;
-        DispatcherTimer timer;
+        DispatcherTimer timer=new System.Windows.Threading.DispatcherTimer();
         Snake snake;
         SnakeDirection snakeDirection;
         Food food;
@@ -32,7 +32,7 @@ namespace SnakeGame
         public MainWindow()
         {
             InitializeComponent();
-
+            DrawGrid();
             Rectangle myRectangle = new Rectangle();
             myRectangle.Name = "myRectangle";
             this.RegisterName(myRectangle.Name, myRectangle);
@@ -43,13 +43,12 @@ namespace SnakeGame
 
             Init();
             MainPanel.Focusable = true;
-
-            timer.Start();
         }
 
         private void Init()
         {
             timer.Interval = new TimeSpan(0, 0, 0, 0, 400);
+            timer.Tick += Timer_Tick;
             snake = new Snake();
             snakeDirection = SnakeDirection.Right;
 
@@ -132,18 +131,18 @@ namespace SnakeGame
 
             StringBuilder data = new StringBuilder();
 
-            for (int x = 0; x < 640; x += 25)
+            for (int x = 0; x <= 850; x += 25)
             {
-                data.Append($"M{x},0 L{x},480 ");
+                data.Append($"M{x},0 L{x},600 ");
             }
 
-            for (int y = 0; y < 480; y += 25)
+            for (int y = 0; y <= 600; y += 25)
             {
-                data.Append($"M0,{y} L640,{y} ");
+                data.Append($"M0,{y} 850,{y} ");
             }
 
             gridPath.Data = Geometry.Parse(data.ToString());
-            myCanvas.Children.Add(gridPath);
+            MainPanel.Children.Add(gridPath);
         }
     }
 }

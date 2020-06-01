@@ -108,5 +108,8 @@
   <ItemGroup>
     <None Include="Resources\SnakeGame.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="部分说明.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
